@@ -23,7 +23,7 @@ class Solution:
 //          returned(1) = m
 //    returned
 
-/*使用hashTable解决twoSum,
+/*使用Map解决twoSum,
 timeComplexity = O(n)
 spaceComplexity = O(n), n 主要为hashTable的开销*/
 object Solution

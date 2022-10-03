@@ -1,3 +1,6 @@
+//题目名称: 删除有序数组中的重复项
+
+
 import scala.collection.mutable.{
   Map,
   HashMap
@@ -6,7 +9,6 @@ class removeDuplicate:
   def calculate(nums: Array[Int]): Int =
     //removeDuplicates_1(nums)//方法一
     removeDuplicates_2(nums)//方法二
-
 
 object removeDuplicate
 /* 方法一
@@ -48,7 +50,7 @@ fast代表第一个指针(指向每次遍历的element), slow代表第二个指�
         if(nums(i) != nums(i-1))
           nums(slow) = nums(i)
           slow += 1
-    for i<-nums do
-      print(s"$i ")
+//    for i<-nums do
+//      print(s"$i ")
     slow
 

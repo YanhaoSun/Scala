@@ -26,7 +26,7 @@ import scala.collection.mutable.ArrayBuffer
   for i<-fifth_1st do
     print(s"$i")
   println()  
-  val fifth_2nd = plusOne.plusOne_2nd(Array(9))
+  val fifth_2nd = plusOne.plusOne_2nd(Array(9,9,9,9))
   for i <- fifth_2nd do
     print(s"$i")
   

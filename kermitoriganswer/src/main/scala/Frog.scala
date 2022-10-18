@@ -1,20 +1,16 @@
 import java.util
 import scala.collection.mutable.ArrayBuffer
 
-class Frog(dimension: Int):
-  var walk: RandomWalk = RandomWalk()
-  walk.start(dimension)
-  println(s"Total number of hops: ${walk.noOfHops}")
-  println(s"Total number of die rolls: ${walk.noOfRolls}")
-  
-  if(dimension==0 || dimension==1)
-    println(s"Path: Empty")
-  
-  var count = 1
-  print(s"Path: ")
-  for i<-walk.path.cellsOnPath do
-    if(count!=walk.path.cellsOnPath.size)
-      print(s"${i.toString()}, ")
-    else
-      print(s"${i.toString()}")
-    count += 1
+class Frog(grid: Grid, die: Die, cell: Cell):
+  private var _currentCell = cell
+  private var _numOfHops = 0
+  def hop =
+    var newCell = grid.computeNewCell(currentCell, direction = die.roll)
+//    println(s"newCell = $newCell")
+    while grid.outsideOfBoundary(newCell) do
+      newCell = grid.computeNewCell(currentCell, direction = die.roll)
+    _currentCell = newCell
+    _numOfHops += 1
+
+  def currentCell: Cell = _currentCell
+  def numOfHops = _numOfHops

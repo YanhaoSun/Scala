@@ -8,14 +8,17 @@ class Path :
   def length: Int =
       cellsOnPath.length
   override def equals(other: Any): Boolean =
+    var equalOrNot = false
     other match
       case other: Path =>
         if cellsOnPath.length != other.length then
-          return false
+          equalOrNot = false
         for i <- 0 until cellsOnPath.length do
           if !(cellsOnPath(i) == other.cellsOnPath(i)) then
-            return false
-        true
-      case _ => false
+             equalOrNot = false
+        equalOrNot = true
+        equalOrNot
+      case _ => equalOrNot = false
+        equalOrNot
     
 

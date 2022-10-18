@@ -6,7 +6,7 @@ class Frog(grid: Grid, die: Die, startCell: Cell):
   private var _currentCell = startCell
 
   // Hop to new location inside grid
-  def hop =
+  def hop = 
     var newCell = grid.computeNewCell(currentCell, direction = die.roll)
     while grid.outsideBoundary(newCell) do
       newCell = grid.computeNewCell(currentCell, direction = die.roll)

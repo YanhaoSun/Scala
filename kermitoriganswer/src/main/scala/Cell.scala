@@ -10,10 +10,10 @@ class Cell(x: Int, y: Int):
     other match
       case other: Cell =>
         if coorX != other.coorX then
-          return false
+          false
         else if coorY != other.coorY then
-          return false
+          false
         else
-          return true
+          true
 
 

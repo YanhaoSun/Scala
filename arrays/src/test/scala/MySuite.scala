@@ -5,5 +5,7 @@ class MySuite extends munit.FunSuite {
     val obtained = 42
     val expected = 42
     assertEquals(obtained, expected)
+    for (i <- 1 to 3) do
+      println("qqqikguju7r")
   }
 }

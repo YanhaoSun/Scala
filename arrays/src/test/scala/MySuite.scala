@@ -7,5 +7,7 @@ class MySuite extends munit.FunSuite {
     assertEquals(obtained, expected)
     for (i <- 1 to 3) do
       println("qqqikguju7r")
+
+    println(s"commit with no network")
   }
 }
